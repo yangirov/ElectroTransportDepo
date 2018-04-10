@@ -1,0 +1,30 @@
+﻿body {
+    opacity: 1;
+}
+
+table thead tr td {
+    font-weight: bold;
+}
+
+.page-content h1 {
+    font-size: 26px;
+}
+
+.page-content .button-wrapper {
+    margin: 15px 0;
+}
+
+.page-content .form-group .form-control {
+    margin: 0 0 15px 0;
+}
+
+.field-validation-error {
+    display: block;
+    margin: 15px 0;
+    font-weight: bold;
+    color: indianred;
+}
+
+.page-content .div:nth-child(2) {
+    margin: 10px 0;
+}

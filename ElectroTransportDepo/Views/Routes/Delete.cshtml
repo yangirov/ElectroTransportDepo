@@ -1,0 +1,17 @@
+﻿@model ElectroTransportDepo.Models.Route
+
+@{
+    ViewBag.Title = "Удалить маршрут";
+}
+
+<h2>Вы уверены, что хотите удалить маршрут <b>@Html.DisplayFor(model => model.Name)</b>?</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-actions no-color">
+        <input type="submit" value="Удалить" class="btn btn-default" /> |
+        @Html.ActionLink("Вернуться к списку", "Index")
+    </div>
+}

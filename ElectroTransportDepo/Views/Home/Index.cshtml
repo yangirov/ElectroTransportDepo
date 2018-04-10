@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ElectroTransportDepo.Models.Depo>
+
+@{
+    ViewBag.Title = "Добро пожаловать!";
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Название</td>
+            <td>Город</td>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City.Name)
+        </td>
+    </tr>
+    }
+</table>

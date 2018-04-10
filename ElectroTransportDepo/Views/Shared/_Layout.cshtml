@@ -1,0 +1,67 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+    <title>@ViewBag.Title | Электротранспорт</title>
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui, maximum-scale=1">
+
+    <style>
+        html {
+            background-color: #fff;
+        }
+
+        body {
+            opacity: 0;
+            overflow-x: hidden;
+            transition: opacity .5s ease;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+
+                <div class="page-content">
+
+                    <div class="button-wrapper">
+                        @Html.ActionLink("Главная", "Index", "Home", null, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Города", "Index", "Cities", null, new { @class = "btn btn-primary" })
+
+                        @Html.ActionLink("Сотрудники", "Index", "Employees", null, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Должности", "Index", "Positions", null, new { @class = "btn btn-primary" })
+
+                        @Html.ActionLink("Депо", "Index", "Depos", null, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Маршруты", "Index", "Routes", null, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Подвижные составы", "Index", "RollingStocks", null, new { @class = "btn btn-primary" })
+                        @Html.ActionLink("Типы транспорта", "Index", "TransportsTypes", null, new { @class = "btn btn-primary" })
+                    </div>
+
+                    <h1>@ViewBag.Title</h1>
+
+                    @RenderBody()
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <link rel="stylesheet" href="~/Content/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Content/custom.css" />
+
+    <script src="~/Content/jquery/jquery.min.js"></script>
+    <script src="~/Content/jquery-validate/jquery.validate.min.js"></script>
+
+</body>
+</html>

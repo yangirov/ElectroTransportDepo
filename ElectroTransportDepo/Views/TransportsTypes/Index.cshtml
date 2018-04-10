@@ -1,0 +1,30 @@
+﻿@model IEnumerable<ElectroTransportDepo.Models.TransportsType>
+
+@{
+    ViewBag.Title = "Типы траспорта";
+}
+
+<div>
+    @Html.ActionLink("Добавить тип транспорта", "Create", null, new { @class = "btn btn-default" }) |
+    @Html.ActionLink("На главную", "Index", "Home")
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Название</td>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+                @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+            </td>
+        </tr>
+    }
+</table>

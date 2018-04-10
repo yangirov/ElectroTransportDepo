@@ -1,0 +1,46 @@
+﻿@model IEnumerable<ElectroTransportDepo.Models.Depo>
+
+@{
+    ViewBag.Title = "Список депо";
+}
+
+<div>
+    @Html.ActionLink("Добавить депо", "Create", null, new { @class = "btn btn-default" }) |
+    @Html.ActionLink("На главную", "Index", "Home")
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Название</td>
+            <td>Описание</td>
+            <td>Телефон</td>
+            <td>Адрес</td>
+            <td>Город</td>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td style="max-width: 250px;">
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Address)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.City.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+    }
+</table>

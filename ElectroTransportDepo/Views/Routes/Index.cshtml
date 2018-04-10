@@ -1,0 +1,38 @@
+﻿@model IEnumerable<ElectroTransportDepo.Models.Route>
+
+@{
+    ViewBag.Title = "Список маршрутов";
+}
+
+<div>
+    @Html.ActionLink("Добавить маршрут", "Create", null, new { @class = "btn btn-default" }) |
+    @Html.ActionLink("На главную", "Index", "Home")
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <td>Номер</td>
+            <td>Депо</td>
+            <td>Тип транспорта</td>
+        </tr>
+    </thead>
+    @foreach (var item in Model)
+    {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Depo.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TransportType.Name)
+        </td>
+        <td>
+            @Html.ActionLink("Редактировать", "Edit", new { id = item.Id }) |
+            @Html.ActionLink("Удалить", "Delete", new { id = item.Id })
+        </td>
+    </tr>
+    }
+</table>
