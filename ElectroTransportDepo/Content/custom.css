@@ -25,6 +25,10 @@ table thead tr td {
     color: indianred;
 }
 
-.page-content .div:nth-child(2) {
-    margin: 10px 0;
+.page-content h1 {
+    margin-bottom: 15px;
+}
+
+.page-content .table {
+    margin-top: 15px;
 }

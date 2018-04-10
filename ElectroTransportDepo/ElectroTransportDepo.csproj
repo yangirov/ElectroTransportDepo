@@ -123,7 +123,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="App_Start\BaseConfig.cs" />
+    <Compile Include="Models\DatabaseConfig.cs" />
     <Compile Include="Models\City.cs" />
     <Compile Include="Models\Depo.cs" />
     <Compile Include="Models\Employee.cs" />
